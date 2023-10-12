@@ -1,0 +1,8 @@
+package com.generativeai.BookStore.repository;
+
+import com.generativeai.BookStore.models.Author;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AuthorRepository extends JpaRepository<Author, Integer> {
+    public Author findByFirstName(String firstName);
+}
